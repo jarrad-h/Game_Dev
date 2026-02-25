@@ -1,0 +1,54 @@
+[gd_scene load_steps=14 format=3 uid="uid://cmain001"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_main"]
+[ext_resource type="PackedScene" uid="uid://cgmap001" path="res://scenes/game_map.tscn" id="2_map"]
+[ext_resource type="PackedScene" uid="uid://chud001" path="res://scenes/ui/hud.tscn" id="3_hud"]
+[ext_resource type="Script" path="res://scripts/systems/turn_manager.gd" id="4_turn"]
+[ext_resource type="Script" path="res://scripts/systems/combat_system.gd" id="5_combat"]
+[ext_resource type="Script" path="res://scripts/systems/resource_manager.gd" id="6_res"]
+[ext_resource type="Script" path="res://scripts/systems/production_system.gd" id="7_prod"]
+[ext_resource type="Script" path="res://scripts/systems/logistics_system.gd" id="8_log"]
+[ext_resource type="Script" path="res://scripts/systems/tech_manager.gd" id="9_tech"]
+[ext_resource type="Script" path="res://scripts/systems/fog_of_war.gd" id="10_fog"]
+[ext_resource type="Script" path="res://scripts/ai/ai_controller.gd" id="11_ai"]
+[ext_resource type="Script" path="res://scripts/ai/ai_economy.gd" id="12_aiecon"]
+[ext_resource type="Script" path="res://scripts/ai/ai_military.gd" id="13_aimil"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_main")
+
+[node name="GameMap" parent="." instance=ExtResource("2_map")]
+
+[node name="HUD" parent="." instance=ExtResource("3_hud")]
+
+[node name="Systems" type="Node" parent="."]
+
+[node name="TurnManager" type="Node" parent="Systems"]
+script = ExtResource("4_turn")
+
+[node name="CombatSystem" type="Node" parent="Systems"]
+script = ExtResource("5_combat")
+
+[node name="ResourceManager" type="Node" parent="Systems"]
+script = ExtResource("6_res")
+
+[node name="ProductionSystem" type="Node" parent="Systems"]
+script = ExtResource("7_prod")
+
+[node name="LogisticsSystem" type="Node" parent="Systems"]
+script = ExtResource("8_log")
+
+[node name="TechManager" type="Node" parent="Systems"]
+script = ExtResource("9_tech")
+
+[node name="FogOfWar" type="Node" parent="Systems"]
+script = ExtResource("10_fog")
+
+[node name="AIController" type="Node" parent="Systems"]
+script = ExtResource("11_ai")
+
+[node name="AIEconomy" type="Node" parent="Systems/AIController"]
+script = ExtResource("12_aiecon")
+
+[node name="AIMilitary" type="Node" parent="Systems/AIController"]
+script = ExtResource("13_aimil")

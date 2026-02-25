@@ -1,0 +1,42 @@
+{
+  "armor_tech": {
+    "id": "armor_tech",
+    "name": "Armored Warfare",
+    "cost": { "materials": 100, "energy": 50 },
+    "research_time": 4,
+    "prerequisites": [],
+    "unlocks": { "units": ["armor"], "buildings": [] },
+    "effects": {},
+    "description": "Unlocks Armor units."
+  },
+  "artillery_tech": {
+    "id": "artillery_tech",
+    "name": "Artillery Development",
+    "cost": { "materials": 80, "energy": 40 },
+    "research_time": 3,
+    "prerequisites": [],
+    "unlocks": { "units": ["artillery"], "buildings": [] },
+    "effects": {},
+    "description": "Unlocks Artillery units."
+  },
+  "advanced_logistics": {
+    "id": "advanced_logistics",
+    "name": "Advanced Logistics",
+    "cost": { "materials": 60, "energy": 30 },
+    "research_time": 3,
+    "prerequisites": [],
+    "unlocks": { "units": [], "buildings": [] },
+    "effects": { "transport_capacity": 2 },
+    "description": "Doubles transport route capacity."
+  },
+  "fortification": {
+    "id": "fortification",
+    "name": "Fortification",
+    "cost": { "materials": 50, "energy": 20 },
+    "research_time": 2,
+    "prerequisites": [],
+    "unlocks": { "units": [], "buildings": ["supply_depot"] },
+    "effects": { "defense_bonus": 1 },
+    "description": "Units gain +1 defense. Unlocks Supply Depots."
+  }
+}

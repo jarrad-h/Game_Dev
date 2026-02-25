@@ -1,0 +1,42 @@
+{
+  "plains": {
+    "id": "plains",
+    "name": "Plains",
+    "color": "#7EC850",
+    "movement_cost": 1,
+    "defense_bonus": 0,
+    "buildable": true
+  },
+  "forest": {
+    "id": "forest",
+    "name": "Forest",
+    "color": "#2D5A1E",
+    "movement_cost": 2,
+    "defense_bonus": 1,
+    "buildable": false
+  },
+  "hills": {
+    "id": "hills",
+    "name": "Hills",
+    "color": "#A0784C",
+    "movement_cost": 2,
+    "defense_bonus": 2,
+    "buildable": true
+  },
+  "mountain": {
+    "id": "mountain",
+    "name": "Mountain",
+    "color": "#808080",
+    "movement_cost": -1,
+    "defense_bonus": 0,
+    "buildable": false
+  },
+  "water": {
+    "id": "water",
+    "name": "Water",
+    "color": "#4A90D9",
+    "movement_cost": -1,
+    "defense_bonus": 0,
+    "buildable": false
+  }
+}
