@@ -64,7 +64,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			_update_hover(hex_pos)
 
 func _screen_to_world(screen_pos: Vector2) -> Vector2:
-	return camera.get_screen_transform().affine_inverse() * screen_pos
+	return get_viewport().get_canvas_transform().affine_inverse() * screen_pos
 
 func _update_hover(new_hex: Vector2i) -> void:
 	# Clear old hover

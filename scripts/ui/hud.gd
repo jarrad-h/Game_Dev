@@ -99,6 +99,7 @@ func _on_building_selected(building: Node2D) -> void:
 		_update_production_menu(building)
 	else:
 		build_menu.visible = true
+		_populate_build_menu()
 
 func _on_building_deselected() -> void:
 	_hide_all_panels()
@@ -197,6 +198,11 @@ func _populate_build_menu() -> void:
 		btn.text = "%s (%s)" % [def.get("name", building_id), cost_str.strip_edges()]
 		btn.pressed.connect(_on_build_pressed.bind(building_id))
 		button_container.add_child(btn)
+
+	var close_btn := Button.new()
+	close_btn.text = "Cancel"
+	close_btn.pressed.connect(_hide_all_panels)
+	button_container.add_child(close_btn)
 
 func _on_build_pressed(building_id: String) -> void:
 	if game_map and game_map.has_method("enter_build_mode"):
