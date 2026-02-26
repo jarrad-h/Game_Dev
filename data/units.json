@@ -1,0 +1,50 @@
+{
+  "infantry": {
+    "id": "infantry",
+    "name": "Infantry",
+    "hp": 100,
+    "attack": 15,
+    "defense": 10,
+    "movement": 2,
+    "range": 1,
+    "cost": { "materials": 20, "energy": 5 },
+    "build_time": 2,
+    "tech_required": null,
+    "sprite": "infantry.png",
+    "color": "#4488CC",
+    "abilities": [],
+    "description": "Basic frontline unit. Strong in numbers."
+  },
+  "armor": {
+    "id": "armor",
+    "name": "Armor",
+    "hp": 200,
+    "attack": 30,
+    "defense": 20,
+    "movement": 3,
+    "range": 1,
+    "cost": { "materials": 60, "energy": 20 },
+    "build_time": 4,
+    "tech_required": "armor_tech",
+    "sprite": "armor.png",
+    "color": "#668844",
+    "abilities": ["breakthrough"],
+    "description": "Heavy unit. Can break through enemy lines."
+  },
+  "artillery": {
+    "id": "artillery",
+    "name": "Artillery",
+    "hp": 60,
+    "attack": 40,
+    "defense": 5,
+    "movement": 1,
+    "range": 3,
+    "cost": { "materials": 50, "energy": 15 },
+    "build_time": 3,
+    "tech_required": "artillery_tech",
+    "sprite": "artillery.png",
+    "color": "#CC6644",
+    "abilities": ["bombard"],
+    "description": "Long-range support. Weak up close."
+  }
+}

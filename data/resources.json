@@ -1,0 +1,16 @@
+{
+  "materials": {
+    "id": "materials",
+    "name": "Materials",
+    "color": "#8B7355",
+    "starting_amount": 100,
+    "description": "Raw materials for construction and manufacturing"
+  },
+  "energy": {
+    "id": "energy",
+    "name": "Energy",
+    "color": "#FFD700",
+    "starting_amount": 50,
+    "description": "Power for buildings and advanced units"
+  }
+}
